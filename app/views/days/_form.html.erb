@@ -5,12 +5,12 @@
     <%= f.datetime_select :date %>
   </p>
   <p>
-    <%= f.label :title %><br />
+    <%= f.label :titre %><br />
     <%= f.text_field :title %>
   </p>
   <p>
-    <%= f.label :event_id %><br />
-    <%= f.text_field :event_id %>
+    <%= f.label :evenement %><br />
+	  <%= f.collection_select(:event_id, Event.all, :id, :name, {:prompt => true}) %>
   </p>
   <p><%= f.submit "Submit" %></p>
 <% end %>
