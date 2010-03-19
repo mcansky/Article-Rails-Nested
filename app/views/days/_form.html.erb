@@ -1,0 +1,16 @@
+<% form_for @day do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :date %><br />
+    <%= f.datetime_select :date %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :event_id %><br />
+    <%= f.text_field :event_id %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

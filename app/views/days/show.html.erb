@@ -1,0 +1,20 @@
+<% title "Day" %>
+
+<p>
+  <strong>Date:</strong>
+  <%=h @day.date %>
+</p>
+<p>
+  <strong>Title:</strong>
+  <%=h @day.title %>
+</p>
+<p>
+  <strong>Event:</strong>
+  <%=h @day.event_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_day_path(@day) %> |
+  <%= link_to "Destroy", @day, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", days_path %>
+</p>
