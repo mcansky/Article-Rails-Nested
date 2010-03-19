@@ -1,0 +1,3 @@
+log/*
+db/*
+vendor/bundled_gems
