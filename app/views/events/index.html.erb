@@ -2,18 +2,18 @@
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>Nom</th>
     <th>Desc</th>
   </tr>
   <% for event in @events %>
     <tr>
       <td><%=h event.name %></td>
       <td><%=h event.desc %></td>
-      <td><%= link_to "Show", event %></td>
-      <td><%= link_to "Edit", edit_event_path(event) %></td>
-      <td><%= link_to "Destroy", event, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Voir", event %></td>
+      <td><%= link_to "Editer", edit_event_path(event) %></td>
+      <td><%= link_to "Détruire", event, :confirm => 'Etes vous sur ?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "New Event", new_event_path %></p>
+<p><%= link_to "Nouvel Evenement", new_event_path %></p>

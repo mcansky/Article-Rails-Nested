@@ -3,19 +3,19 @@
 <table>
   <tr>
     <th>Date</th>
-    <th>Title</th>
-    <th>Event</th>
+    <th>Titre</th>
+    <th>Evenement</th>
   </tr>
   <% for day in @days %>
     <tr>
       <td><%=h day.date %></td>
       <td><%=h day.title %></td>
-      <td><%=h day.event_id %></td>
-      <td><%= link_to "Show", day %></td>
-      <td><%= link_to "Edit", edit_day_path(day) %></td>
-      <td><%= link_to "Destroy", day, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%=h day.event.name %></td>
+      <td><%= link_to "Voir", day %></td>
+      <td><%= link_to "Editer", edit_day_path(day) %></td>
+      <td><%= link_to "Detruire", day, :confirm => 'Etes vous sur ?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "New Day", new_day_path %></p>
+<p><%= link_to "Nouveau Jour", new_day_path %></p>
