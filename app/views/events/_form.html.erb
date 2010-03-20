@@ -8,5 +8,10 @@
     <%= f.label :desc %><br />
     <%= f.text_area :desc %>
   </p>
+	<div class="top_days">
+	<% f.fields_for :days do |builder| %>
+		<%= render 'day_fields', :f => builder %>
+	<% end %>
+	</div>
   <p><%= f.submit "Submit" %></p>
 <% end %>
